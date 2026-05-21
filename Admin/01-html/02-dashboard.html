@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../02-css/00-root.css">
+    <link rel="stylesheet" href="../02-css/02-dashboard.css">
+    <link rel="stylesheet" href="../02-css/03-modulos.css">
+</head>
+<body>
+<div id="page-dashboard" class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <!-- Reemplaza src con tu logo -->
+      <img src="LOGO.png" alt="Logo" />
+      <span>Gymshark</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item active" data-screen="categorias">
+        <span class="nav-icon">◈</span> Categorías
+      </div>
+      <div class="nav-item" data-screen="productos">
+        <span class="nav-icon">◉</span> Productos
+      </div>
+      <div class="nav-item" data-screen="pedidos">
+        <span class="nav-icon">◎</span> Pedidos
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="btn-logout">
+        <span>⇤</span> Cerrar sesión
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <span class="topbar-title" id="topbar-title">Categorías</span>
+      <div class="topbar-admin">
+        <div class="avatar">A</div>
+        <span>Administrador</span>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- ── SCREEN: CATEGORÍAS ── -->
+      <div id="screen-categorias" class="screen active">
+        <div class="section-header">
+          <h2>Categorías</h2>
+          <button class="btn btn-primary" id="btn-open-cat-modal">+ Agregar categoría</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Productos</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Tops</td>
+                <td>Camisetas, tanks y hoodies de entrenamiento</td>
+                <td><span class="badge">24 productos</span></td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Bottoms</td>
+                <td>Leggings, shorts y joggers de alto rendimiento</td>
+                <td><span class="badge">31 productos</span></td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Accesorios</td>
+                <td>Gorras, bolsos y complementos deportivos</td>
+                <td><span class="badge">18 productos</span></td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>Calzado</td>
+                <td>Zapatillas y calcetines de entrenamiento</td>
+                <td><span class="badge">9 productos</span></td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!-- ── SCREEN: PRODUCTOS ── -->
+      <div id="screen-productos" class="screen">
+        <div class="section-header">
+          <h2>Productos</h2>
+          <button class="btn btn-primary" id="btn-open-prod-modal">+ Agregar producto</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img class="product-img" src="PRODUCT1.jpg" alt="Vital Seamless Top" /></td>
+                <td style="color:var(--gray-400);font-size:12px;letter-spacing:1px">GS-001</td>
+                <td>Vital Seamless Top</td>
+                <td><span class="badge">Tops</span></td>
+                <td>$45.00</td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="product-img" src="PRODUCT2.jpg" alt="Flex Leggings" /></td>
+                <td style="color:var(--gray-400);font-size:12px;letter-spacing:1px">GS-002</td>
+                <td>Flex Leggings</td>
+                <td><span class="badge">Bottoms</span></td>
+                <td>$60.00</td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="product-img" src="PRODUCT3.jpg" alt="Legacy Shorts" /></td>
+                <td style="color:var(--gray-400);font-size:12px;letter-spacing:1px">GS-003</td>
+                <td>Legacy Shorts</td>
+                <td><span class="badge">Bottoms</span></td>
+                <td>$38.00</td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="product-img" src="PRODUCT4.jpg" alt="Sport Cap" /></td>
+                <td style="color:var(--gray-400);font-size:12px;letter-spacing:1px">GS-004</td>
+                <td>Sport Cap</td>
+                <td><span class="badge">Accesorios</span></td>
+                <td>$22.00</td>
+                <td class="td-actions">
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!-- ── SCREEN: PEDIDOS ── -->
+      <div id="screen-pedidos" class="screen">
+        <div class="section-header">
+          <h2>Pedidos</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pedido</th>
+                <th>Cliente</th>
+                <th>Email</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:700">#ORD-1024</td>
+                <td>María Gómez</td>
+                <td style="color:var(--gray-400);font-size:13px">maria@email.com</td>
+                <td style="color:var(--gray-400);font-size:13px">20/05/2026</td>
+                <td style="font-weight:700">$143.00</td>
+                <td><span class="status-badge status-shipped">Enviado</span></td>
+                <td><button class="btn btn-edit btn-ver-detalle" data-order="1024">Ver detalle</button></td>
+              </tr>
+              <tr>
+                <td style="font-weight:700">#ORD-1023</td>
+                <td>Carlos Ruiz</td>
+                <td style="color:var(--gray-400);font-size:13px">carlos@email.com</td>
+                <td style="color:var(--gray-400);font-size:13px">19/05/2026</td>
+                <td style="font-weight:700">$98.00</td>
+                <td><span class="status-badge status-pending">Pendiente</span></td>
+                <td><button class="btn btn-edit btn-ver-detalle" data-order="1023">Ver detalle</button></td>
+              </tr>
+              <tr>
+                <td style="font-weight:700">#ORD-1022</td>
+                <td>Laura Pérez</td>
+                <td style="color:var(--gray-400);font-size:13px">laura@email.com</td>
+                <td style="color:var(--gray-400);font-size:13px">18/05/2026</td>
+                <td style="font-weight:700">$212.00</td>
+                <td><span class="status-badge status-shipped">Enviado</span></td>
+                <td><button class="btn btn-edit btn-ver-detalle" data-order="1022">Ver detalle</button></td>
+              </tr>
+              <tr>
+                <td style="font-weight:700">#ORD-1021</td>
+                <td>Andrés Torres</td>
+                <td style="color:var(--gray-400);font-size:13px">andres@email.com</td>
+                <td style="color:var(--gray-400);font-size:13px">17/05/2026</td>
+                <td style="font-weight:700">$67.00</td>
+                <td><span class="status-badge status-canceled">Cancelado</span></td>
+                <td><button class="btn btn-edit btn-ver-detalle" data-order="1021">Ver detalle</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- DETALLE DE PEDIDO -->
+        <div class="order-detail" id="order-detail">
+          <div class="detail-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+              <h3 style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px">Detalle del Pedido <span id="detail-order-num">#ORD-1024</span></h3>
+              <button class="btn btn-outline" id="btn-close-detail" style="font-size:11px;padding:8px 16px">✕ Cerrar</button>
+            </div>
+            <hr class="detail-divider" />
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+
+              <!-- Cliente -->
+              <div>
+                <p style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px">Datos del cliente</p>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <div class="detail-field">
+                    <label>Nombre completo</label>
+                    <p>María Gómez</p>
+                  </div>
+                  <div class="detail-field">
+                    <label>Correo electrónico</label>
+                    <p>maria@email.com</p>
+                  </div>
+                  <div class="detail-field">
+                    <label>Teléfono</label>
+                    <p>+57 310 000 0000</p>
+                  </div>
+                  <div class="detail-field">
+                    <label>Dirección de envío</label>
+                    <p>Cra 12 #34-56, Bucaramanga, Santander</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resumen pedido -->
+              <div>
+                <p style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px">Resumen del pedido</p>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <div class="detail-field">
+                    <label>Número de pedido</label>
+                    <p>#ORD-1024</p>
+                  </div>
+                  <div class="detail-field">
+                    <label>Fecha</label>
+                    <p>20 de mayo, 2026 — 10:34 AM</p>
+                  </div>
+                  <div class="detail-field">
+                    <label>Estado</label>
+                    <p><span class="status-badge status-shipped">Enviado</span></p>
+                  </div>
+                  <div class="detail-field">
+                    <label>Método de pago</label>
+                    <p>Tarjeta de crédito ••••4321</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="detail-divider" />
+
+            <!-- Productos del pedido -->
+            <p style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px">Productos</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Código</th>
+                    <th>Cantidad</th>
+                    <th>Precio unit.</th>
+                    <th>Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vital Seamless Top</td>
+                    <td style="color:var(--gray-400);font-size:12px">GS-001</td>
+                    <td>2</td>
+                    <td>$45.00</td>
+                    <td style="font-weight:700">$90.00</td>
+                  </tr>
+                  <tr>
+                    <td>Sport Cap</td>
+                    <td style="color:var(--gray-400);font-size:12px">GS-004</td>
+                    <td>1</td>
+                    <td>$22.00</td>
+                    <td style="font-weight:700">$22.00</td>
+                  </tr>
+                  <tr>
+                    <td>Legacy Shorts</td>
+                    <td style="color:var(--gray-400);font-size:12px">GS-003</td>
+                    <td>1</td>
+                    <td>$38.00</td>
+                    <td style="font-weight:700">$38.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="display:flex;justify-content:flex-end;margin-top:20px;gap:32px;align-items:flex-end">
+              <div style="text-align:right">
+                <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-400)">Subtotal</p>
+                <p style="font-size:16px;font-weight:600">$143.00</p>
+              </div>
+              <div style="text-align:right">
+                <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-400)">Envío</p>
+                <p style="font-size:16px;font-weight:600">$0.00</p>
+              </div>
+              <div style="text-align:right">
+                <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-400)">Total</p>
+                <p style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;text-shadow:0 0 20px rgba(255,255,255,0.2)">$143.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /content -->
+  </div><!-- /main -->
+</div><!-- /dashboard -->
+
+
+<!-- ══════════════════════════════════════
+     MODAL: AGREGAR / EDITAR CATEGORÍA
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-categoria">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-cat-title">Nueva categoría</h3>
+      <button class="modal-close" data-close="modal-categoria">✕</button>
+    </div>
+    <div class="modal-form">
+      <div class="field">
+        <label for="cat-nombre">Nombre</label>
+        <input id="cat-nombre" type="text" placeholder="Ej: Tops, Bottoms…" />
+      </div>
+      <div class="field">
+        <label for="cat-desc">Descripción</label>
+        <textarea id="cat-desc" rows="3" placeholder="Descripción breve de la categoría…"
+          style="background:var(--gray-700);border:1px solid var(--gray-600);color:var(--white);padding:12px 14px;resize:vertical;transition:border .2s,box-shadow .2s"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" data-close="modal-categoria">Cancelar</button>
+        <button class="btn btn-primary" id="btn-save-cat">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL: AGREGAR / EDITAR PRODUCTO
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-producto">
+  <div class="modal" style="max-width:560px">
+    <div class="modal-header">
+      <h3 id="modal-prod-title">Nuevo producto</h3>
+      <button class="modal-close" data-close="modal-producto">✕</button>
+    </div>
+    <div class="modal-form">
+      <div class="form-row">
+        <div class="field">
+          <label for="prod-codigo">Código</label>
+          <input id="prod-codigo" type="text" placeholder="Ej: GS-005" />
+        </div>
+        <div class="field">
+          <label for="prod-precio">Precio (USD)</label>
+          <input id="prod-precio" type="number" placeholder="0.00" step="0.01" min="0" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="prod-nombre">Nombre del producto</label>
+        <input id="prod-nombre" type="text" placeholder="Ej: Vital Seamless Leggings" />
+      </div>
+      <div class="field">
+        <label for="prod-categoria">Categoría</label>
+        <select id="prod-categoria">
+          <option value="">— Selecciona —</option>
+          <option>Tops</option>
+          <option>Bottoms</option>
+          <option>Accesorios</option>
+          <option>Calzado</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="prod-imagen">URL de imagen</label>
+        <input id="prod-imagen" type="url" placeholder="https://…" />
+      </div>
+      <div class="field">
+        <label for="prod-desc">Descripción breve</label>
+        <textarea id="prod-desc" rows="3" placeholder="Descripción del producto…"
+          style="background:var(--gray-700);border:1px solid var(--gray-600);color:var(--white);padding:12px 14px;resize:vertical;transition:border .2s,box-shadow .2s"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" data-close="modal-producto">Cancelar</button>
+        <button class="btn btn-primary" id="btn-save-prod">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

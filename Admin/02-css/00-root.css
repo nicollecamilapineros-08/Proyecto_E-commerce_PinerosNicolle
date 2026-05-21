@@ -1,0 +1,47 @@
+:root {
+      --black:    #000000;
+      --gray-900: #0a0a0a;
+      --gray-800: #111111;
+      --gray-700: #1a1a1a;
+      --gray-600: #252525;
+      --gray-500: #333333;
+      --gray-400: #555555;
+      --gray-300: #888888;
+      --gray-200: #bbbbbb;
+      --white:    #ffffff;
+      --accent:   #ffffff;
+      --danger:   #ff3b3b;
+      --success:  #2dde98;
+      --shadow-sm:  0 0 12px rgba(255,255,255,0.06);
+      --shadow-md:  0 0 24px rgba(255,255,255,0.10);
+      --shadow-lg:  0 0 40px rgba(255,255,255,0.14);
+      --shadow-btn: 0 0 20px rgba(255,255,255,0.25);
+      --radius:   4px;
+      --sidebar-w: 220px;
+      --transition: .2s ease;
+    }
+
+    /* ─── RESET ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+    input, textarea, select {
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      border: none;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── HELPERS ────────────────────────────────── */
+    .hidden   { display: none !important; }
+    .page     { display: none; height: 100%; }
+    .page.active { display: flex; }
