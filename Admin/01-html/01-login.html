@@ -1,34 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+
+    <title>Gymshark Login</title>
+
     <link rel="stylesheet" href="../02-css/00-root.css">
     <link rel="stylesheet" href="../02-css/01-login.css">
+
 </head>
+
 <body>
-    
-    <div id="page-login" class="page active">
-  <div class="login-box">
-    <div class="login-brand">
-      <img src="LOGO.png" alt="Gymshark Logo" />
-      <h1>Gymshark</h1>
-      <p>Panel de Administración</p>
-    </div>
 
-    <div class="field">
-      <label for="login-email">Correo electrónico</label>
-      <input id="login-email" type="email" placeholder="admin@gymshark.com" />
-    </div>
+    <section class="login-container">
 
-    <div class="field">
-      <label for="login-pass">Contraseña</label>
-      <input id="login-pass" type="password" placeholder="••••••••" />
-    </div>
-    <a href="../01-html/02-dashboard.html"><button class="btn btn-primary" id="btn-login" style="width:100%">Ingresar</button></a>
-    
-  </div>
-</div>
+        <div class="login-box">
+
+            <!-- LOGO -->
+            <img src="../img/logoGymshark.png" alt="Logo">
+
+            <h1>GYMSHARK</h1>
+
+            <p>Panel administrativo</p>
+
+            <form>
+
+                <div class="input-group">
+
+                    <label>Correo electrónico</label>
+
+                    <input type="email" placeholder="admin@gymshark.com">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Contraseña</label>
+
+                    <input type="password" placeholder="********">
+
+                </div>
+
+                <button type="button">
+                    Ingresar
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="../js/app.js"></script>
+
 </body>
 </html>
