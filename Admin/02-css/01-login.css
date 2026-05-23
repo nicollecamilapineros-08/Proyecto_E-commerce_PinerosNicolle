@@ -1,132 +1,88 @@
-.login-container{
+.login-container {
 
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background:
-    linear-gradient(to bottom,#000,#111);
+        linear-gradient(to bottom, #000, #111);
     box-shadow: white;
 
 }
 
-.login-box{
-
-    width:500px;
-
-    background:var(--gray);
-
-    padding:40px;
-
-    border-radius:var(--radius);
-
+.login-box {
+    width: 500px;
+    background: var(--gray);
+    padding: 40px;
+    border-radius: var(--radius);
     box-shadow:
-    0 0 25px rgba(255,255,255,.25);
+        0 0 25px rgba(255, 255, 255, .25);
     overflow: hidden;
     transition: 0.4s;
 }
 
-.login-box:hover{
+.login-box:hover {
     transform: translateY(-10px);
-
     box-shadow: 0 0 20px #ffffff;
-
 }
 
-.login-box img{
-
-    width:150px;
-
-    display:block;
-
-    margin:auto;
-
-    margin-bottom:20px;
-
+.login-box img {
+    width: 150px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-.login-box h1{
-
-    text-align:center;
-
-    margin-bottom:10px;
-
-    letter-spacing:3px;
-
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
     font-size: 35px;
-
 }
 
-.login-box p{
-
-    text-align:center;
-
-    color:#aaa;
-
-    margin-bottom:30px;
-
+.login-box p {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 30px;
     font-style: italic;
-
 }
 
-.input-datos{
-
-    display:flex;
-    flex-direction:column;
-    margin-bottom:25px;
-
+.input-datos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
 }
 
-.input-datos label{
-
-    margin-bottom:20px;
-
+.input-datos label {
+    margin-bottom: 20px;
 }
 
-.input-datos input{
-
-    padding:14px;
-
-    border-radius:var(--radius);
-
-    background:var(--light-gray);
-
-    color:white;
-
+.input-datos input {
+    padding: 14px;
+    border-radius: var(--radius);
+    background: var(--light-gray);
+    color: white;
 }
 
-.input-datos input:focus{
-
-    box-shadow:var(--shadow);
-
+.input-datos input:focus {
+    box-shadow: var(--shadow);
 }
 
-.login-box button{
-
-    width:100%;
-
-    padding:14px;
-
-    background:white;
-
-    color:black;
-
-    font-weight:bold;
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    background: white;
+    color: black;
+    font-weight: bold;
     font-size: 15px;
-
-    border-radius:var(--radius);
-
+    border-radius: var(--radius);
 }
 
-.login-box button:hover{
-
-    background:black;
-
-    color:white;
-
-    box-shadow:var(--shadow);
-
+.login-box button:hover {
+    background: black;
+    color: white;
+    box-shadow: var(--shadow);
 }
