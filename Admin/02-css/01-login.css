@@ -25,15 +25,20 @@
 
     box-shadow:
     0 0 25px rgba(255,255,255,.25);
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.login-box:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 20px #ffffff;
 
 }
 
 .login-box img{
 
-    width:90px;
+    width:150px;
 
     display:block;
 
@@ -51,6 +56,8 @@
 
     letter-spacing:3px;
 
+    font-size: 35px;
+
 }
 
 .login-box p{
@@ -61,24 +68,25 @@
 
     margin-bottom:30px;
 
+    font-style: italic;
+
 }
 
-.input-group{
+.input-datos{
 
     display:flex;
     flex-direction:column;
+    margin-bottom:25px;
+
+}
+
+.input-datos label{
 
     margin-bottom:20px;
 
 }
 
-.input-group label{
-
-    margin-bottom:10px;
-
-}
-
-.input-group input{
+.input-datos input{
 
     padding:14px;
 
@@ -90,7 +98,7 @@
 
 }
 
-.input-group input:focus{
+.input-datos input:focus{
 
     box-shadow:var(--shadow);
 
@@ -107,6 +115,7 @@
     color:black;
 
     font-weight:bold;
+    font-size: 15px;
 
     border-radius:var(--radius);
 

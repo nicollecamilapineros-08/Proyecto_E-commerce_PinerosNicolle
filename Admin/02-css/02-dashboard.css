@@ -1,398 +1,253 @@
-.dashboard{
-
-    display:flex;
-
-    min-height:100vh;
-
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-image: url(../img/fondogymshark.jpg);
+    background-size: cover;
 }
 
-/* SIDEBAR */
-
-.sidebar{
-
-    width:250px;
-
-    background:var(--dark);
-
-    border-right:1px solid #222;
-
-    padding:30px 20px;
-
+.sidebar {
+    width: 250px;
+    background: var(--dark);
+    border-right: 1px solid #222;
+    padding: 30px 20px;
 }
 
-.logo{
-
-    text-align:center;
-
-    margin-bottom:40px;
-
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.logo img{
-
-    width:80px;
-
-    margin-bottom:10px;
-
+.logo img {
+    width: 100px;
+    margin-bottom: 10px;
 }
 
-.logo h2{
-
-    letter-spacing:3px;
-
+.logo h2 {
+    letter-spacing: 2px;
 }
 
-.sidebar nav{
-
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.nav-btn{
-
-    padding:15px;
-
-    background:var(--gray);
-
-    color:white;
-
-    border-radius:var(--radius);
-
-    text-align:left;
-
+.nav-btn {
+    padding: 15px;
+    background: var(--gray);
+    color: white;
+    border-radius: var(--radius);
+    text-align: left;
 }
 
-.nav-btn:hover{
-
-    background:white;
-
-    color:black;
-
-    box-shadow:var(--shadow);
-
+.nav-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: var(--shadow);
 }
 
-.nav-btn.active{
-
-    background:white;
-
-    color:black;
-
+.nav-btn.active {
+    background: white;
+    color: black;
 }
 
-/* MAIN */
-
-.main-content{
-
-    flex:1;
-
-    padding:60px;
-
+.main-content {
+    flex: 1;
+    padding: 60px;
 }
 
-.module{
-
-    display:none;
-
+.module {
+    display: none;
 }
 
-.active-module{
-
-    display:block;
-
+.active-module {
+    display: block;
 }
 
-.module-header{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    margin-bottom:25px;
-
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
-.module-header button{
-
-    background:white;
-
-    color:black;
-
-    padding:14px 20px;
-
-    border-radius:var(--radius);
-
-    font-weight:bold;
-
+.module-header button {
+    background: white;
+    color: black;
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    font-weight: bold;
 }
 
-.module-header button:hover{
-
-    background:black;
-
-    color:white;
-
-    box-shadow:var(--shadow);
-
+.module-header button:hover {
+    background: black;
+    color: white;
+    box-shadow: var(--shadow);
 }
 
-/* TABLE */
-
-.table-container{
-
-    overflow-x:auto;
-
+.table-container {
+    overflow-x: auto;
 }
 
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    background:var(--gray);
-
-    box-shadow:var(--shadow);
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--gray);
+    box-shadow: var(--shadow);
 }
 
-th{
-
-    background:#161616;
-
-    padding:18px;
-
-    text-align:left;
-
+th {
+    background: #161616;
+    padding: 18px;
+    text-align: left;
 }
 
-td{
-
-    padding:18px;
-
-    border-top:1px solid #222;
-
+td {
+    padding: 18px;
+    border-top: 1px solid #222;
 }
 
-.actions{
-
-    display:flex;
-    gap:10px;
-
+.actions {
+    display: flex;
+    gap: 10px;
 }
 
-.edit{
-
-    background:white;
-
-    color:black;
-
-    padding:10px 14px;
-
+.edit {
+    background: white;
+    color: black;
+    padding: 10px 14px;
+    border-radius: 2px;
 }
 
-.edit:hover{
-
-    background:black;
-
-    color:white;
-
-    box-shadow:var(--shadow);
-
+.edit:hover {
+    background: black;
+    color: white;
+    box-shadow: var(--shadow);
 }
 
-.delete{
-
-    background:transparent;
-
-    color:var(--red);
-
-    border:1px solid var(--red);
-
-    padding:10px 14px;
-
+.delete {
+    background: transparent;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 10px 14px;
+    border-radius: 3px;
 }
 
-.delete:hover{
-
-    background:var(--red);
-
-    color:white;
-
+.delete:hover {
+    background: var(--red);
+    color: white;
 }
 
-/* MODAL */
-
-/* MODAL */
-
-.modal{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100vh;
-
-    background:rgba(0,0,0,.75);
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:999;
-
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
-.modal.active{
-
-    display:flex;
-
+.modal.active {
+    display: flex;
 }
 
-.modal-content{
-
-    width:400px;
-
-    background:var(--gray);
-
-    padding:30px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    position:relative;
-
+.modal-content {
+    width: 400px;
+    background: var(--gray);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: relative;
 }
 
-.close-modal{
-
-    position:absolute;
-
-    top:15px;
-    right:15px;
-
-    width:35px;
-    height:35px;
-
-    border-radius:50%;
-
-    background:#222;
-
-    color:white;
-
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #222;
+    color: white;
 }
 
-.close-modal:hover{
-
-    background:white;
-
-    color:black;
-
+.close-modal:hover {
+    background: white;
+    color: black;
 }
 
-.modal-content{
-
-    width:400px;
-
-    background:var(--gray);
-
-    padding:30px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
+.modal-content {
+    width: 400px;
+    background: var(--gray);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-.modal-content h2{
-
-    margin-bottom:20px;
-
+.modal-content h2 {
+    margin-bottom: 20px;
 }
 
-.modal-content form{
-
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .modal-content input,
-.modal-content textarea{
+.modal-content textarea {
+    padding: 14px;
+    background: var(--light-gray);
+    color: white;
+    border-radius: var(--radius);
+}
 
-    padding:14px;
+.modal-content textarea {
+    height: 120px;
+    resize: none;
+}
 
-    background:var(--light-gray);
+.modal-content button {
+    padding: 14px;
+    background: white;
+    color: black;
+    border-radius: var(--radius);
+    font-weight: bold;
+}
 
-    color:white;
-
-    border-radius:var(--radius);
+.modal-content button:hover {
+    background: black;
+    color: white;
+    box-shadow: var(--shadow);
 
 }
 
-.modal-content textarea{
-
-    height:120px;
-
-    resize:none;
-
+.order-detail {
+    margin-top: 30px;
+    background: var(--gray);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-.modal-content button{
-
-    padding:14px;
-
-    background:white;
-
-    color:black;
-
-    border-radius:var(--radius);
-
-    font-weight:bold;
-
+.order-detail h2 {
+    margin-bottom: 20px;
 }
 
-.modal-content button:hover{
-
-    background:black;
-
-    color:white;
-
-    box-shadow:var(--shadow);
-
+.order-detail p {
+    margin-bottom: 10px;
 }
 
-/* PEDIDOS */
 
-.order-detail{
+barra-lateral,
+tabla-categorias,
+tabla-productos,
+tabla-pedidos{
 
-    margin-top:30px;
-
-    background:var(--gray);
-
-    padding:25px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-}
-
-.order-detail h2{
-
-    margin-bottom:20px;
-
-}
-
-.order-detail p{
-
-    margin-bottom:10px;
+    display:block;
 
 }

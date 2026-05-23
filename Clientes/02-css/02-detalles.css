@@ -1,0 +1,104 @@
+.detalle{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+
+    padding:60px;
+
+}
+
+.imagen{
+
+    width:450px;
+
+}
+
+.imagen img{
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+.info{
+
+    width:450px;
+
+}
+
+.volver{
+
+    display:inline-block;
+
+    margin-bottom:30px;
+
+    color:#bbb;
+
+}
+
+.volver:hover{
+
+    color:white;
+
+}
+
+.info h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.descripcion{
+
+    color:#bbb;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.precio{
+
+    font-size:35px;
+
+    font-weight:bold;
+
+    margin-bottom:30px;
+
+}
+
+.info button{
+
+    width:100%;
+
+    padding:16px;
+
+    background:white;
+
+    color:black;
+
+    border-radius:var(--radius);
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+.info button:hover{
+
+    background:black;
+
+    color:white;
+
+    box-shadow:var(--shadow);
+
+}
