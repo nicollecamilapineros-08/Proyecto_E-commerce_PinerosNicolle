@@ -18,7 +18,7 @@
 }
 
 .logo img {
-    width: 100px;
+    width: 180px;
     margin-bottom: 10px;
 }
 
@@ -100,9 +100,10 @@ table {
 }
 
 th {
-    background: #161616;
+    background: #ffffff;
     padding: 18px;
     text-align: left;
+    color: black;
 }
 
 td {

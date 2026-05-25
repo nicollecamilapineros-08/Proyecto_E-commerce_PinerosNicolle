@@ -1,7 +1,7 @@
 class DetalleProducto extends HTMLElement {
   connectedCallback() {
     const productos = JSON.parse(localStorage.getItem("productos")) || [];
-    const indice = localStorage.getItem("productoSeleccionado");
+    const indice = Number(localStorage.getItem("productoSeleccionado"));
     const producto = productos[indice];
 
     if (!producto) {

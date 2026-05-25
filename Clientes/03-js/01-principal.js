@@ -11,8 +11,8 @@ class BuscadorProductos extends HTMLElement {
           id="inputBuscar" 
           placeholder="Buscar productos..."
         />
-        <select id="filtroCategorias">
-          <option value="">Categorías</option>
+        <select class="filtroCategorias">
+          <option value="">CATEGORÍAS</option>
         </select>
       </div>
     `;
@@ -44,24 +44,25 @@ function pintarProductos(lista) {
     return;
   }
 
-  lista.forEach((producto, indice) => {
+  lista.forEach((producto) => {
+    const indiceReal = productos.indexOf(producto);
+
     contenedor.innerHTML += `
       <div class="card">
         <img src="${producto.imagen}" alt="${producto.nombre}" />
         <h2>${producto.nombre}</h2>
         <p class="categoria">${producto.categoria}</p>
         <p class="precio">$${producto.precio}</p>
-        <a href="../01-html/02-detalles.html" onclick="verDetalle(${indice})">
+        <a href="../01-html/02-detalles.html" onclick="verDetalle(${indiceReal})">
           Ver detalles
         </a>
-        <button onclick="agregarAlCarrito(${indice})">
+        <button onclick="agregarAlCarrito(${indiceReal})">
           Agregar al carrito
         </button>
       </div>
     `;
   });
 }
-
 
 function filtrar() {
   const texto = document.querySelector("#inputBuscar").value.toLowerCase();
