@@ -56,30 +56,126 @@
     box-shadow:var(--shadow);
 
 }
-
-.productos{
-    padding:40px;
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+.carrito-item .delete {
+  margin-left: auto;
+  background: transparent;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 8px 12px;
 }
 
-.card{
-    background:var(--gray);
-    padding:20px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    transition:var(--transition);
-        box-shadow:
-    0 0 25px rgba(255,255,255,.25);
-    overflow: hidden;
-    transition: 0.4s;
+.carrito-item .delete:hover {
+  background: var(--red);
+  color: white;
+}
+
+.modal-carrito {
+  background: #111;
+  padding: 30px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid #222;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carrito-header h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.carrito-header button {
+  background: #222;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.carrito-header button:hover {
+  background: white;
+  color: black;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #222;
+}
+
+.carrito-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  background: #222;
+}
+
+.carrito-info h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.carrito-info p {
+  color: #888;
+  font-size: 13px;
+}
+
+.carrito-total {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.btnComprar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btnComprar:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.carrito-vacio {
+  color: #888;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.productos {
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5px;
+}
+
+.card {
+  background: var(--gray);
+  padding: 10px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: 0.4s;
+  width: 250px;
 }
 
 .card:hover{
     transform: translateY(-10px);
-
     box-shadow: 0 0 20px #ffffff;
 
 }
@@ -129,10 +225,121 @@
 .card button:hover{
 
     background:black;
-
     color:white;
-
     box-shadow:var(--shadow);
 
 }
 
+.fondo-carrito,
+.fondo-formulario {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.75);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fondo-carrito.active,
+.fondo-formulario.active {
+  display: flex;
+}
+
+.modal-carrito {
+  background: #111;
+  padding: 30px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.fondo-formulario {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .75);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fondo-formulario.active {
+  display: flex;
+}
+
+.modal-formulario {
+  background: #111;
+  padding: 30px;
+  width: 480px;
+  border: 1px solid #222;
+}
+
+.formulario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.formulario-header h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.formulario-header button {
+  background: #222;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.formulario-header button:hover {
+  background: white;
+  color: black;
+}
+
+.formulario-cliente {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario-cliente input {
+  padding: 14px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  font-size: 14px;
+}
+
+.formulario-cliente input::placeholder {
+  color: #555;
+}
+
+.formulario-cliente input:focus {
+  border-color: white;
+  outline: none;
+}
+
+.formulario-cliente button {
+  margin-top: 8px;
+  padding: 14px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.formulario-cliente button:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}

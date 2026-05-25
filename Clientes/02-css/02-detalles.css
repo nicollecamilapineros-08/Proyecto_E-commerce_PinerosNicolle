@@ -1,104 +1,139 @@
-.detalle{
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:60px;
-
-    padding:60px;
-
+/* ─── HEADER ─── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #0a0a0a;
+  border-bottom: 1px solid #222;
 }
 
-.imagen{
-
-    width:450px;
-
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.imagen img{
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
+.logo img {
+  width: 40px;
 }
 
-.info{
-
-    width:450px;
-
+.logo h1 {
+  font-size: 20px;
+  letter-spacing: 4px;
 }
 
-.volver{
-
-    display:inline-block;
-
-    margin-bottom:30px;
-
-    color:#bbb;
-
+.btn-carrito {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.volver:hover{
-
-    color:white;
-
+/* ─── DETALLE ─── */
+.detalle {
+  display: flex;
+  gap: 60px;
+  padding: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.info h1{
-
-    font-size:42px;
-
-    margin-bottom:20px;
-
+.detalle .imagen {
+  flex: 1;
 }
 
-.descripcion{
-
-    color:#bbb;
-
-    line-height:1.8;
-
-    margin-bottom:25px;
-
+.detalle .imagen img {
+  width: 100%;
+  object-fit: cover;
 }
 
-.precio{
-
-    font-size:35px;
-
-    font-weight:bold;
-
-    margin-bottom:30px;
-
+.detalle .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 }
 
-.info button{
-
-    width:100%;
-
-    padding:16px;
-
-    background:white;
-
-    color:black;
-
-    border-radius:var(--radius);
-
-    font-size:16px;
-
-    font-weight:bold;
-
+.volver {
+  color: #888;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
-.info button:hover{
+.volver:hover { color: white; }
 
-    background:black;
+.info h1 {
+  font-size: 36px;
+  letter-spacing: 2px;
+}
 
-    color:white;
+.info .categoria {
+  color: #888;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-    box-shadow:var(--shadow);
+.info .descripcion {
+  color: #aaa;
+  line-height: 1.6;
+}
 
+.info .precio {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.info button {
+  padding: 16px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.info button:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* ─── CARRITO Y FORMULARIO OCULTOS ─── */
+.fondo-carrito,
+.fondo-formulario {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.75);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fondo-carrito.active,
+.fondo-formulario.active {
+  display: flex;
+}
+
+.modal-carrito {
+  background: #111;
+  padding: 30px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid #222;
+}
+
+.modal-formulario {
+  background: #111;
+  padding: 30px;
+  width: 480px;
+  border: 1px solid #222;
 }

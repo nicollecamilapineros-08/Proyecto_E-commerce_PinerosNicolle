@@ -172,73 +172,32 @@ class Productos extends HTMLElement {
 customElements.define("tabla-productos", Productos);
 
 class Pedidos extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="module-header">
+        <h1>PEDIDOS</h1>
+      </div>
 
-            <div class="module-header">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Fecha</th>
+              <th>Cliente</th>
+              <th>Total</th>
+              <th>Estado</th>
+              <th>Detalle</th>
+            </tr>
+          </thead>
+          <tbody id="listaPedidos"></tbody>
+        </table>
+      </div>
 
-                <h1>PEDIDOS</h1>
-
-            </div>
-
-            <div class="table-container">
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-
-                            <th>Pedido</th>
-                            <th>Cliente</th>
-                            <th>Total</th>
-                            <th>Estado</th>
-                            <th>Detalle</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-
-                            <td>#001</td>
-                            <td>Juan Pérez</td>
-                            <td>$320.000</td>
-                            <td>Pagado</td>
-
-                            <td>
-
-                                <button class="edit">
-                                    Ver detalle
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-
-            <div class="order-detail">
-
-                <h2>Detalle del pedido</h2>
-                <p><strong>Cliente:</strong> Juan Pérez</p>
-                <p><strong>Producto:</strong> Oversize Black</p>
-                <p><strong>Cantidad:</strong> 2</p>
-                <p><strong>Total:</strong> $320.000</p>
-                <p><strong>Dirección:</strong> Calle 10 #20-30</p>
-
-            </div>
-
-        `;
-    }
+      <div id="detallePedido" class="order-detail" style="display:none">
+      </div>
+    `;
+  }
 }
 
 customElements.define("tabla-pedidos", Pedidos);
-

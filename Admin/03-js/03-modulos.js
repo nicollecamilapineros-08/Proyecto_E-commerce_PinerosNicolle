@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       iniciarCategorias();
       iniciarProductos();
+      iniciarPedidos();
 
     }, 100);
   });
@@ -270,10 +271,138 @@ function editarProducto(index) {
 
 //PEDIDOS
 
-//Este mostrará la lista de pedidos hechos a través del e-commerce.
-// Debe mostrar los pedidos ordenados por fecha de la más reciente a la más antigua, los datos del cliente y el total comprado. 
-// También, debe haber una vista que muestre los detalles completos de cada pedido.
+function iniciarPedidos() {
+  pintarPedidos();
+}
 
+function pintarPedidos() {
+  const lista = document.querySelector("#listaPedidos");
+  if (!lista) return;
 
+  let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+
+  // ordenar de más reciente a más antiguo
+  pedidos.sort((a, b) => b.id - a.id);
+
+  lista.innerHTML = "";
+
+  if (pedidos.length === 0) {
+    lista.innerHTML = `
+      <tr>
+        <td colspan="6">No hay pedidos registrados.</td>
+      </tr>
+    `;
+    return;
+  }
+
+  pedidos.forEach((pedido, indice) => {
+    lista.innerHTML += `
+      <tr>
+        <td>#${pedido.id}</td>
+        <td>${pedido.fecha}</td>
+        <td>${pedido.cliente.nombre}</td>
+        <td>$${Number(pedido.total).toLocaleString()}</td>
+        <td>${pedido.estado}</td>
+        <td>
+          <button class="edit" onclick="verDetalle(${indice})">
+            Ver detalle
+          </button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+function verDetalle(indice) {
+  let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+  pedidos.sort((a, b) => b.id - a.id);
+  const pedido = pedidos[indice];
+
+  const detalle = document.querySelector("#detallePedido");
+  detalle.style.display = "block";
+
+  detalle.innerHTML = `
+    <h2>Detalle del pedido #${pedido.id}</h2>
+    <hr class="detail-divider" />
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:20px">
+
+      <div>
+        <p class="detail-section-label">Datos del cliente</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+          <div class="detail-field">
+            <label>Identificación</label>
+            <p>${pedido.cliente.identificacion}</p>
+          </div>
+          <div class="detail-field">
+            <label>Nombre</label>
+            <p>${pedido.cliente.nombre}</p>
+          </div>
+          <div class="detail-field">
+            <label>Dirección</label>
+            <p>${pedido.cliente.direccion}</p>
+          </div>
+          <div class="detail-field">
+            <label>Teléfono</label>
+            <p>${pedido.cliente.telefono}</p>
+          </div>
+          <div class="detail-field">
+            <label>Correo</label>
+            <p>${pedido.cliente.correo}</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="detail-section-label">Resumen</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+          <div class="detail-field">
+            <label>Fecha</label>
+            <p>${pedido.fecha}</p>
+          </div>
+          <div class="detail-field">
+            <label>Estado</label>
+            <p>${pedido.estado}</p>
+          </div>
+          <div class="detail-field">
+            <label>Total</label>
+            <p>$${Number(pedido.total).toLocaleString()}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="detail-divider" />
+
+    <p class="detail-section-label">Productos</p>
+    <div class="table-container" style="margin-top:10px">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${pedido.productos.map(p => `
+            <tr>
+              <td>${p.nombre}</td>
+              <td>$${p.precio}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align:right;margin-top:20px">
+      <button class="edit" onclick="cerrarDetalle()">Cerrar</button>
+    </div>
+  `;
+}
+
+function cerrarDetalle() {
+  document.querySelector("#detallePedido").style.display = "none";
+}
 
 
