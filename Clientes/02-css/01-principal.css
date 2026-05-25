@@ -5,6 +5,8 @@
     padding:25px 40px;
     background:var(--dark);
     border-bottom:1px solid #ffffff;
+    background-image: url(https://i.pinimg.com/1200x/94/cd/7c/94cd7cad80752ea37b84964ecab5e8a6.jpg);
+    opacity: 80%;
 }
 .logo{
     display:flex;
@@ -28,8 +30,8 @@
     padding:14px;
     margin-top: 25px;
     margin-left: 750px;
-    background:var(--gray);
-    color:white;
+    background:#c0baba;
+    color:rgb(0, 0, 0);
     border:none;
     border-radius:var(--radius);
 }
@@ -173,13 +175,6 @@
   transition: 0.4s;
   width: 250px;
 }
-
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px #ffffff;
-
-}
-
 
 .card:hover{
     transform:translateY(-6px);
@@ -342,4 +337,11 @@
   background: black;
   color: white;
   box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.filtroCategorias {
+  background-color: #5f5e5e;
+  color: white;
+  height: 40px;
+  border-radius: 8px;
 }
