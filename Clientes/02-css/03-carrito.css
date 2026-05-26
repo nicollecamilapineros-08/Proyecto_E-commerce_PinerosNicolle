@@ -81,3 +81,32 @@
     box-shadow:var(--shadow);
 }
 
+/* Cel */
+@media (max-width: 600px) {
+
+    .modal-carrito {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .item-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .item-carrito img {
+        width: 100%;
+        max-width: 120px;
+    }
+
+    .acciones-carrito {
+        width: 100%;
+    }
+
+    .acciones-carrito button {
+        width: 100%;
+    }
+
+}
+
