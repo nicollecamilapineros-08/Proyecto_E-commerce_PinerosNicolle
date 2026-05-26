@@ -22,8 +22,20 @@
         0 0 25px rgba(255, 255, 255, .25);
     overflow: hidden;
     transition: 0.4s;
+    animation: subirLogin 1s ease;
 }
 
+@keyframes subirLogin {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .login-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px #ffffff;
