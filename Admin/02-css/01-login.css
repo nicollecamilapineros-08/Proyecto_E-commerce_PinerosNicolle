@@ -101,3 +101,45 @@
     color: white;
     box-shadow: var(--shadow);
 }
+
+/* ===== TABLETS ===== */
+
+@media (max-width: 900px) {
+
+    .login-box {
+
+        width: 90%;
+
+        padding: 40px 30px;
+
+    }
+
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+
+    .login-box {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 28px;
+    }
+
+    .login-box p {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}

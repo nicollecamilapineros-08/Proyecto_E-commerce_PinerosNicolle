@@ -42,3 +42,18 @@ textarea{
     outline:none;
     font-family:var(--font);
 }
+
+/* Responsive */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}

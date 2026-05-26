@@ -1,4 +1,4 @@
-# Proyecto_E-commerce
+
 # Gymshark E-Commerce — Proyecto Académico
 
 > Plataforma de comercio electrónico inspirada en **Gymshark**, desarrollada con tecnologías web fundamentales: HTML, CSS, JavaScript y Web Components.

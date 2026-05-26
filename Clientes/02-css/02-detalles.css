@@ -428,3 +428,31 @@
   background: rgba(255, 59, 59, .08);
   border-color: #ff3b3b;
 }
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .detalle {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+
+/* Cel */
+@media (max-width: 600px) {
+
+    .detalle {
+        padding: 20px;
+    }
+
+    .info h1 {
+        font-size: 28px;
+    }
+
+    .info button {
+        width: 100%;
+    }
+
+}
