@@ -11,7 +11,7 @@ class BuscadorProductos extends HTMLElement {
           id="inputBuscar" 
           placeholder="Buscar productos..."
         />
-        <select class="filtroCategorias">
+        <select id="filtroCategorias">
           <option value="">CATEGORÍAS</option>
         </select>
       </div>
@@ -31,8 +31,6 @@ class BuscadorProductos extends HTMLElement {
 
 customElements.define("buscador-productos", BuscadorProductos);
 
-
-
 const productos = JSON.parse(localStorage.getItem("productos")) || [];
 
 function pintarProductos(lista) {
@@ -44,7 +42,7 @@ function pintarProductos(lista) {
     return;
   }
 
-  lista.forEach((producto) => {
+  lista.forEach((producto, index) => {
     const indiceReal = productos.indexOf(producto);
 
     contenedor.innerHTML += `
@@ -53,7 +51,7 @@ function pintarProductos(lista) {
         <h2>${producto.nombre}</h2>
         <p class="categoria">${producto.categoria}</p>
         <p class="precio">$${producto.precio}</p>
-        <a href="../01-html/02-detalles.html" onclick="verDetalle(${indiceReal})">
+        <a href="../01-html/02-detalles.html" onclick="verDetalles(${indiceReal})">
           Ver detalles
         </a>
         <button onclick="agregarAlCarrito(${indiceReal})">
@@ -105,6 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// function verDetalle(indice) {
-//   localStorage.setItem("productoSeleccionado", indice);
-// }
+
+function verDetalles(indice) {
+  localStorage.setItem("productoSeleccionado", indice);
+
+  window.location.href = "../01-html/02-detalles.html";
+}
