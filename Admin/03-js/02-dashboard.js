@@ -37,7 +37,7 @@ class Categorias extends HTMLElement {
 
             <div class="module-header">
 
-                <h1>CATEGORÍAS</h1>
+                <h1><i>CATEGORÍAS</i></h1>
 
                 <button id="open-modal">
                     + Agregar categoría
@@ -53,9 +53,9 @@ class Categorias extends HTMLElement {
 
                         <tr>
 
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Acciones</th>
+                            <th><i>NOMBRE</i></th>
+                            <th><i>DESCRIPCIÓN</i></th>
+                            <th><i>ACCIONES</i></th>
 
                         </tr>
 
@@ -114,7 +114,7 @@ class Productos extends HTMLElement {
     this.innerHTML = `
 
       <div class="module-header">
-        <h1>PRODUCTOS</h1>
+        <h1><i>PRODUCTOS</i></h1>
         <button id="open-modal-producto">+ Agregar producto</button>
       </div>
 
@@ -122,13 +122,13 @@ class Productos extends HTMLElement {
         <table>
           <thead>
             <tr>
-              <th>Código</th>
-              <th>Nombre</th>
-              <th>Categoría</th>
-              <th>Precio</th>
-              <th>Imagen</th>
-              <th>Descripción</th>
-              <th>Acciones</th>
+              <th><i>CÓDIGO</i></th>
+              <th><i>NOMBRE</i></th>
+              <th><i>CATEGORÍA</i></th>
+              <th><i>PRECIO</i></th>
+              <th><i>IMAGEN</i></th>
+              <th><i>DESCRIPCION</i></th>
+              <th><i>ACCIONES</i></th>
             </tr>
           </thead>
           <tbody id="listaProductos">
@@ -175,19 +175,19 @@ class Pedidos extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <div class="module-header">
-        <h1>PEDIDOS</h1>
+        <h1><i>PEDIDOS</i></h1>
       </div>
 
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Fecha</th>
-              <th>Cliente</th>
-              <th>Total</th>
-              <th>Estado</th>
-              <th>Detalle</th>
+              <th><i>ID</i></th>
+              <th><i>FECHA</i></th>
+              <th><i>CLIENTE</i></th>
+              <th><i>TOTAL</i></th>
+              <th><i>ESTADO</i></th>
+              <th><i>DETALLES</i></th>
             </tr>
           </thead>
           <tbody id="listaPedidos"></tbody>

@@ -1,63 +1,75 @@
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 40px;
-    background:var(--dark);
-    border-bottom:1px solid #ffffff;
-    background-image: url(https://i.pinimg.com/1200x/94/cd/7c/94cd7cad80752ea37b84964ecab5e8a6.jpg);
-    opacity: 80%;
-}
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.body {
+      animation: aparecerPagina 5s ease;
 }
 
-.logo img{
-    width:145px;
-    margin-left: 700px;
-}
+@keyframes aparecerPagina {
 
-.logo h1{
-    letter-spacing:2px;
-    font-size: 40px;
-}
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
 
-.buscador input{
-    width:480px;
-    height: 6dvh;
-    padding:14px;
-    margin-top: 25px;
-    margin-left: 750px;
-    background:#c0baba;
-    color:rgb(0, 0, 0);
-    border:none;
-    border-radius:var(--radius);
-}
-
-.buscador input:focus{
-    box-shadow:var(--shadow);
-}
-
-.btn-carrito{
-    background: white;
-    color:black;
-    padding:14px 22px;
-    border-radius:var(--radius);
-    font-weight:bold;
-    font-size: 15px;
-}
-
-.btn-carrito:hover{
-
-    background:black;
-
-    color:white;
-
-    box-shadow:var(--shadow);
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  border-bottom: 1px solid #ffffff;
+  background-image: url(https://i.pinimg.com/1200x/94/cd/7c/94cd7cad80752ea37b84964ecab5e8a6.jpg);
+  opacity: 80%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 145px;
+  margin-left: 700px;
+}
+
+.logo h1 {
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+.buscador {
+  color: white;
+}
+
+.buscador input {
+  width: 480px;
+  height: 6dvh;
+  padding: 14px;
+  margin-top: 25px;
+  margin-left: 750px;
+  background: #a9a2a2;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: var(--radius);
+}
+
+.buscador input:focus {
+  box-shadow: var(--shadow);
+}
+.btn-carrito {
+  background: rgb(213, 212, 212);
+  color: black;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .carrito-item .delete {
   margin-left: auto;
   background: transparent;
@@ -136,6 +148,24 @@
   font-size: 18px;
 }
 
+.carrito-item .delete {
+  margin-left: auto;
+  background: transparent;
+  color: #ff3b3b;
+  border: 1px solid rgba(255, 59, 59, .35);
+  padding: 8px 12px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .2s;
+  flex-shrink: 0;
+}
+
+.carrito-item .delete:hover {
+  background: rgba(255, 59, 59, .08);
+  border-color: #ff3b3b;
+}
+
 .btnComprar {
   width: 100%;
   margin-top: 20px;
@@ -150,7 +180,7 @@
 .btnComprar:hover {
   background: black;
   color: white;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .carrito-vacio {
@@ -176,52 +206,52 @@
   width: 250px;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow: 0 0 20px #ffffff;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ffffff;
 }
 
-.card img{
-    height:300px;
-    object-fit:cover;
-    border-radius:var(--radius);
-    margin-bottom:20px;
+.card img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
 }
 
-.card h2{
-    margin-bottom:10px;
+.card h2 {
+  margin-bottom: 10px;
 }
 
-.precio{
-    font-size:15px;
-    font-weight:bold;
-    margin-bottom:20px;
+.precio {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.card a{
-    display:block;
-    margin-bottom:15px;
-    color:#bbb;
+.card a {
+  display: block;
+  margin-bottom: 15px;
+  color: #bbb;
 }
 
-.card a:hover{
-    color:white;
+.card a:hover {
+  color: white;
 }
 
-.card button{
-    width:100%;
-    padding:14px;
-    background:rgb(206, 197, 197);
-    color:black;
-    border-radius:var(--radius);
-    font-weight:bold;
+.card button {
+  width: 100%;
+  padding: 14px;
+  background: rgb(206, 197, 197);
+  color: black;
+  border-radius: var(--radius);
+  font-weight: bold;
 }
 
-.card button:hover{
+.card button:hover {
 
-    background:black;
-    color:white;
-    box-shadow:var(--shadow);
+  background: black;
+  color: white;
+  box-shadow: var(--shadow);
 
 }
 
@@ -242,6 +272,22 @@
 .fondo-carrito.active,
 .fondo-formulario.active {
   display: flex;
+  overflow: hidden;
+  transition: 0.4s;
+  animation: subirLogin 1s ease;
+
+}
+
+@keyframes subirLogin {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .modal-carrito {
@@ -251,6 +297,7 @@
   max-height: 80vh;
   overflow-y: auto;
 }
+
 .fondo-formulario {
   display: none;
   position: fixed;
@@ -273,6 +320,21 @@
   padding: 30px;
   width: 480px;
   border: 1px solid #222;
+  animation: aparecerPagina 1s ease;
+}
+
+@keyframes aparecerPagina {
+
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
 }
 
 .formulario-header {
@@ -336,7 +398,7 @@
 .formulario-cliente button:hover {
   background: black;
   color: white;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .filtroCategorias {

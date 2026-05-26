@@ -3,32 +3,38 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: #0a0a0a;
-  border-bottom: 1px solid #222;
+  padding: 25px 40px;
+  background-image: url(https://i.pinimg.com/1200x/94/cd/7c/94cd7cad80752ea37b84964ecab5e8a6.jpg);
+  border-bottom: 1px solid #ffffff;
+  opacity: 80%;
+
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
+
 }
 
 .logo img {
-  width: 40px;
+  width: 145px;
+  margin-left: 700px;
+
 }
 
 .logo h1 {
-  font-size: 20px;
-  letter-spacing: 4px;
+  font-size: 40px;
+  letter-spacing: 1px;
 }
 
 .btn-carrito {
-  background: white;
+  background: rgb(213, 212, 212);
   color: black;
-  padding: 10px 20px;
+  padding: 14px 20px;
+  border-radius: var(--radius);
   font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 18px;
 }
 
 /* ─── DETALLE ─── */
@@ -36,8 +42,26 @@
   display: flex;
   gap: 60px;
   padding: 60px;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 60px auto;
+  border-radius: var(--radius);
+  background-color: #1c1b1b;
+  box-shadow: 0 0 20px #ffffff;
+  overflow: hidden;
+  transition: 0.4s;
+  animation: subirDetalle 1s ease;
+}
+
+@keyframes subirDetalle {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .detalle .imagen {
@@ -59,11 +83,13 @@
 
 .volver {
   color: #888;
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
-.volver:hover { color: white; }
+.volver:hover {
+  color: white;
+}
 
 .info h1 {
   font-size: 36px;
@@ -72,7 +98,7 @@
 
 .info .categoria {
   color: #888;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -99,10 +125,121 @@
 .info button:hover {
   background: black;
   color: white;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 /* ─── CARRITO Y FORMULARIO OCULTOS ─── */
+.modal-carrito {
+  background: #111;
+  padding: 30px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.fondo-formulario {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .75);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fondo-formulario.active {
+  display: flex;
+}
+
+.modal-formulario {
+  background: #111;
+  padding: 30px;
+  width: 480px;
+  border: 1px solid #222;
+  animation: aparecerPagina 1s ease;
+}
+
+@keyframes aparecerPagina {
+
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.formulario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.formulario-header h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.formulario-header button {
+  background: #222;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.formulario-header button:hover {
+  background: white;
+  color: black;
+}
+
+.formulario-cliente {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario-cliente input {
+  padding: 14px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  font-size: 14px;
+}
+
+.formulario-cliente input::placeholder {
+  color: #555;
+}
+
+.formulario-cliente input:focus {
+  border-color: white;
+  outline: none;
+}
+
+.formulario-cliente button {
+  margin-top: 8px;
+  padding: 14px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.formulario-cliente button:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
 .fondo-carrito,
 .fondo-formulario {
   display: none;
@@ -111,7 +248,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.75);
+  background: rgba(0, 0, 0, .75);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -120,6 +257,20 @@
 .fondo-carrito.active,
 .fondo-formulario.active {
   display: flex;
+  overflow: hidden;
+  transition: 0.4s;
+  animation: subirCarro 1s ease;
+}
+@keyframes subirCarro {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .modal-carrito {
@@ -136,4 +287,144 @@
   padding: 30px;
   width: 480px;
   border: 1px solid #222;
+}
+
+.btn-carrito {
+  background: white;
+  color: black;
+  padding: 14px 22px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn-carrito:hover {
+
+  background: black;
+
+  color: white;
+
+  box-shadow: var(--shadow);
+
+}
+
+
+.carrito-item .delete {
+  margin-left: auto;
+  background: transparent;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 8px 12px;
+}
+
+.carrito-item .delete:hover {
+  background: var(--red);
+  color: white;
+}
+
+.modal-carrito {
+  background: #111;
+  padding: 30px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid #222;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carrito-header h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.carrito-header button {
+  background: #222;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.carrito-header button:hover {
+  background: white;
+  color: black;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #222;
+}
+
+.carrito-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  background: #222;
+}
+
+.carrito-info h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.carrito-info p {
+  color: #888;
+  font-size: 13px;
+}
+
+.carrito-total {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.btnComprar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btnComprar:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+.carrito-vacio {
+  color: #888;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.carrito-item .delete {
+  margin-left: auto;
+  background: transparent;
+  color: #ff3b3b;
+  border: 1px solid rgba(255, 59, 59, .35);
+  padding: 8px 12px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .2s;
+  flex-shrink: 0;
+}
+
+.carrito-item .delete:hover {
+  background: rgba(255, 59, 59, .08);
+  border-color: #ff3b3b;
 }

@@ -79,6 +79,7 @@
     padding: 14px 20px;
     border-radius: var(--radius);
     font-weight: bold;
+    font-size: 18px;
 }
 
 .module-header button:hover {
@@ -101,10 +102,10 @@ table {
 }
 
 th {
-    background: #ffffff;
+    background: #818181;
     padding: 18px;
     text-align: left;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 td {
