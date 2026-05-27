@@ -19,8 +19,7 @@
 
 .logo img {
   width: 145px;
-  margin-left: 700px;
-
+  display: block;
 }
 
 .logo h1 {
@@ -42,6 +41,7 @@
   display: flex;
   gap: 60px;
   padding: 60px;
+  width: 90%;       
   max-width: 1000px;
   margin: 60px auto;
   border-radius: var(--radius);
@@ -50,6 +50,7 @@
   overflow: hidden;
   transition: 0.4s;
   animation: subirDetalle 1s ease;
+  box-sizing: border-box; 
 }
 
 @keyframes subirDetalle {
@@ -132,9 +133,12 @@
 .modal-carrito {
   background: #111;
   padding: 30px;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   max-height: 80vh;
   overflow-y: auto;
+  border: 1px solid #222;
+  box-sizing: border-box;
 }
 
 .fondo-formulario {
@@ -157,9 +161,10 @@
 .modal-formulario {
   background: #111;
   padding: 30px;
-  width: 480px;
+  width: 90%;
+  max-width: 480px;
   border: 1px solid #222;
-  animation: aparecerPagina 1s ease;
+  box-sizing: border-box;
 }
 
 @keyframes aparecerPagina {
@@ -429,30 +434,82 @@
   border-color: #ff3b3b;
 }
 
-/* Tablet */
-@media (max-width: 900px) {
+/* Cel */
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .logo h1 {
+        font-size: 35px;
+    }
+
+    .btn-carrito {
+        width: 100%;
+        max-width: 250px;
+    }
 
     .detalle {
         flex-direction: column;
-        gap: 40px;
+        margin: 20px auto; 
+        padding: 25px;
+        gap: 30px;
+        width: 95%; 
     }
-}
 
+    /* IMAGEN */
+    .imagen {
+        width: 100%;
+    }
 
+    .imagen img {
+        width: 100%;
+        height: auto;
+    }
 
-/* Cel */
-@media (max-width: 600px) {
-
-    .detalle {
-        padding: 20px;
+    /* INFO */
+    .info {
+        width: 100%;
+        text-align: center;
     }
 
     .info h1 {
-        font-size: 28px;
+        font-size: 30px; 
     }
 
+    .info .descripcion {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .info .precio {
+        font-size: 26px;
+    }
+
+    /* BOTÓN */
     .info button {
         width: 100%;
     }
 
+    /* VOLVER */
+    .volver {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
 }

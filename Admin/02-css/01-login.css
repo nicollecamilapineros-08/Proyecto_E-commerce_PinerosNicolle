@@ -102,43 +102,44 @@
     box-shadow: var(--shadow);
 }
 
-/* ===== TABLETS ===== */
+/* tablet*/
 
-@media (max-width: 900px) {
+@media screen and (max-width: 768px){
 
-    .login-box {
+    .login-container{
+        padding: 30px;
+    }
 
+    .login-box{
         width: 90%;
-
+        max-width: 500px;
         padding: 40px 30px;
+    }
 
+    .login-box h1{
+        font-size: 3rem;
     }
 
 }
 
+/* cel */
 
+@media screen and (max-width: 480px){
 
-/* Responsive */
-@media (max-width: 600px) {
-
-    .login-box {
+    .login-box{
         width: 95%;
         padding: 30px 20px;
     }
 
-    .login-box h1 {
-        font-size: 28px;
+    .login-box h1{
+        font-size: 2.3rem;
     }
 
-    .login-box p {
-        font-size: 14px;
+    .login-box img{
+        width: 80px;
     }
 
-    input {
-        font-size: 14px;
-    }
-
-    button {
+    .login-box button{
         width: 100%;
     }
 

@@ -375,7 +375,7 @@ function verDetalle(indice) {
 
     <hr class="detail-divider" />
 
-    <p class="detail-section-label">Productos</p>
+    <p class="detail-section-label">PRODUCTOS</p>
     <div class="table-container" style="margin-top:10px">
       <table>
         <thead>
