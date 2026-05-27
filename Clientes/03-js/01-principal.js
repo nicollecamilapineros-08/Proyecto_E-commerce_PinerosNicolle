@@ -1,6 +1,4 @@
-// ══════════════════════════════
-// WEB COMPONENT — BUSCADOR
-// ══════════════════════════════
+//buscador
 
 class BuscadorProductos extends HTMLElement {
   connectedCallback() {

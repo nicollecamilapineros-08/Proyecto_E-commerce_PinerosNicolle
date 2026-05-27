@@ -139,9 +139,7 @@ class ModalCarrito extends HTMLElement {
 
 customElements.define("modal-carrito", ModalCarrito);
 
-// ══════════════════════════════
-// FUNCIONES
-// ══════════════════════════════
+// funciones
 
 function abrirCarrito() {
   document.querySelector("modal-carrito").render();
