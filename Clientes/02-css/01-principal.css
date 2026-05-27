@@ -63,9 +63,7 @@
 .buscador input {
   width: 100%;
   max-width: 480px;
-  /* Controla el tamaño máximo en pantallas grandes */
   height: 6vh;
-  /* Cambiado de dvh a vh para mayor compatibilidad estándar */
   padding: 14px;
   background: #a9a2a2;
   color: rgb(255, 255, 255);
@@ -437,7 +435,6 @@
 
 @media screen and (max-width: 768px) {
 
-
   .header {
     flex-direction: column;
     justify-content: center;
@@ -465,9 +462,6 @@
     max-width: 250px;
   }
 
-
-  /* BUSCADOR */
-
   .buscador {
     flex-direction: column;
     /* Alinea los elementos de forma vertical en móviles */
@@ -493,8 +487,6 @@
     width: 100%;
   }
 
-  /* PRODUCTOS */
-
   .productos {
     display: grid;
     grid-template-columns: 1fr;
@@ -511,8 +503,6 @@
     height: auto;
   }
 
-  /* TEXTOS */
-
   .card h2 {
     font-size: 28px;
   }
@@ -520,8 +510,6 @@
   .precio {
     font-size: 22px;
   }
-
-  /* BOTONES */
 
   .card button {
     width: 100%;
