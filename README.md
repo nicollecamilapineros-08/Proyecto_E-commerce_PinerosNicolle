@@ -145,11 +145,6 @@ PROYECTO_E-COMMERCE_PINEROSNICOLLE/
 
 ---
 
-##  Wireframes
-
-![Wireframes](../Wireframes/Wireframes.png)
-
----
 
 ## 👩‍💻 Autora
 
