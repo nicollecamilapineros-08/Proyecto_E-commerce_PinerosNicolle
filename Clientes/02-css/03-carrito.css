@@ -81,32 +81,26 @@
     box-shadow:var(--shadow);
 }
 
-/* Cel */
-@media (max-width: 600px) {
+/* cel */
 
-    .modal-carrito {
+@media screen and (max-width: 480px){
+
+    .modal-carrito-content{
         width: 95%;
         padding: 20px;
     }
 
-    .item-carrito {
+    .item-carrito{
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        text-align: center;
     }
 
-    .item-carrito img {
-        width: 100%;
-        max-width: 120px;
+    .item-carrito img{
+        width: 100px;
     }
 
-    .acciones-carrito {
-        width: 100%;
-    }
-
-    .acciones-carrito button {
+    .btn-comprar{
         width: 100%;
     }
 
 }
-
