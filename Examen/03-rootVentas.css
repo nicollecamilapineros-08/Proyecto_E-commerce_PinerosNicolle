@@ -1,0 +1,53 @@
+:root {
+    --black: #000;
+    --dark: #111;
+    --gray: #1b1b1b;
+    --light-gray: #2a2a2a;
+    --white: #fff;
+    --red: #ff3b3b;
+    --shadow:
+        0 0 20px rgba(255, 255, 255, .12);
+    --transition: .3s ease;
+    --radius: 8px;
+    --font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-family: var(--font);
+}
+
+/* Responsive */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}

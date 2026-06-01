@@ -1,18 +1,14 @@
-.body {
-    background-image: url(../img/indexBackground.jpg);
-}
-
-.login-container {
+.contenedorReporte {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/indexBackground.jpg);
+    background-color: #1c1b1b;
     box-shadow: white;
 }
 
-.login-box {
+.reporte-box {
     width: 500px;
     background: var(--gray);
     padding: 40px;
@@ -35,26 +31,27 @@
         transform: translateY(0);
     }
 }
-.login-box:hover {
+
+.contenedorReporte:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px #ffffff;
 }
 
-.login-box img {
+.reporte-box img {
     width: 150px;
     display: block;
     margin: auto;
     margin-bottom: 20px;
 }
 
-.login-box h1 {
+.reporte-box h1 {
     text-align: center;
     margin-bottom: 10px;
-    letter-spacing: 3px;
-    font-size: 35px;
+    font-size: 25px;
+    font-style: italic;
 }
 
-.login-box p {
+.reporte-box p {
     text-align: center;
     color: #aaa;
     margin-bottom: 30px;
@@ -82,7 +79,7 @@
     box-shadow: var(--shadow);
 }
 
-.login-box button {
+.reporte-box button {
     width: 100%;
     padding: 14px;
     background: white;
@@ -92,27 +89,73 @@
     border-radius: var(--radius);
 }
 
-.login-box button:hover {
+.reporte-box button:hover {
     background: black;
     color: white;
     box-shadow: var(--shadow);
 }
 
+.btnBuscarReporte a {
+    text-decoration: none;
+}
+
+.contenedorInterfaz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.contenedorInterfaz h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.contenedorInterfaz img {
+    width: 100px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--gray);
+    box-shadow: var(--shadow);
+
+}
+
+th {
+    background: #818181;
+    padding: 18px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+
+td {
+    padding: 18px;
+    border-top: 1px solid #222;
+}
+
 /* tablet*/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .login-container{
+    .contenedorReporte {
         padding: 30px;
     }
 
-    .login-box{
+    .reporte-box {
         width: 90%;
         max-width: 500px;
         padding: 40px 30px;
     }
 
-    .login-box h1{
+    .reporte-box h1 {
         font-size: 3rem;
     }
 
@@ -120,23 +163,36 @@
 
 /* cel */
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 600px) {
 
-    .login-box{
+    .reporte-box {
         width: 95%;
         padding: 30px 20px;
     }
 
-    .login-box h1{
+    .reporte-box h1 {
         font-size: 2.3rem;
     }
 
-    .login-box img{
+    .reporte-box img {
         width: 80px;
     }
 
-    .login-box button{
+    .reporte-box button {
         width: 100%;
     }
 
+    .contenedorInterfaz {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
 }

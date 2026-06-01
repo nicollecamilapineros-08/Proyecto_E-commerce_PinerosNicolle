@@ -271,7 +271,9 @@ function editarProducto(index) {
 
 //PEDIDOS
 
-function iniciarPedidos() {
+
+
+export function iniciarPedidos() {
   pintarPedidos();
 }
 

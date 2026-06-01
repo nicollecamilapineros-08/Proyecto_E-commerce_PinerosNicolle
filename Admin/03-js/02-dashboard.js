@@ -61,7 +61,9 @@ class Categorias extends HTMLElement {
 
                     </thead>
 
-                    <tbody id="listaCategorias"></tbody>
+                    <tbody id="listaCategorias">
+                    
+                    </tbody>
 
                 </table>
 
@@ -127,10 +129,7 @@ class Productos extends HTMLElement {
               <th><i>CATEGORÍA</i></th>
               <th><i>PRECIO</i></th>
               <th><i>IMAGEN</i></th>
-              <th><i>DESCRIPCION</i></th>
-              <th><i>ACCIONES</i></th>
-            </tr>
-          </thead>
+              <th><i>DESCRIPCI#${pedido.id}
           <tbody id="listaProductos">
           </tbody>
         </table>
@@ -190,7 +189,13 @@ class Pedidos extends HTMLElement {
               <th><i>DETALLES</i></th>
             </tr>
           </thead>
-          <tbody id="listaPedidos"></tbody>
+          <tbody id="listaPedidos">
+              <th>1098655</th>
+              <th>01-05-2026</th>
+              <th>Miranda</th>
+              <th>265000</th>
+              <th>Camiseta deportiva</th>
+          </tbody>
         </table>
       </div>
 
